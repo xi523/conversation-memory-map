@@ -1,8 +1,8 @@
 interface:
   display_name: "Conversation Memory Map"
-  short_description: "Sync discussion state and durable knowledge maps"
+  short_description: "Turn Agent conversations into maps you can revisit"
   brand_color: "#E04B43"
-  default_prompt: "Use $conversation-memory-map to sync this conversation into a thinking map and a durable topic knowledge map."
+  default_prompt: "Use $conversation-memory-map to map our conversation, show decisions and open questions on the right, and preserve reusable conclusions."
 
 policy:
   allow_implicit_invocation: false

@@ -2,15 +2,27 @@
 
 [中文](README.md) · [English](README_EN.md)
 
-Turn long, linear conversations into two maintainable views: a live map of the current discussion and a durable map of reusable knowledge.
+Turn conversations with your Agent into a visual map you can revisit.
 
-![Conversation thinking map example](examples/knowledge-base-conversation-map.png)
+You discuss requirements, compare options, and refine ideas with an Agent. As the conversation grows, it becomes harder to remember what you covered, why the direction changed, and what is still unresolved. Designed for Codex, this skill lets you keep thinking through conversation. When you want to take stock, say “Sync the conversation map” to see the discussion, current conclusions, and next steps on the right.
 
-## Why this skill exists
+![Conversation with an Agent on the left, an on-demand conversation map on the right](examples/conversation-to-map-en.png)
 
-Long conversations rarely suffer from a lack of content. They lose structure: what was discussed, why a decision was made, what remains open, and what should happen next all disappear beneath newer messages.
+*An illustrative scenario, not a screenshot of the Codex interface. The left panel shows a simplified conversation; the right panel organizes that conversation into a map. Updates are explicitly requested by the user.*
 
-This skill does not merely summarize the transcript. It maintains two complementary forms of memory:
+## When to use it
+
+**Working through requirements or options with an Agent.** A discussion often moves from “what should we build?” to “what is outside this phase?” The map keeps those branches and trade-offs visible, so you can revisit how the direction narrowed, not just read the final answer.
+
+**Learning or researching a topic with an Agent.** Concepts, examples, and untested ideas accumulate as you ask more questions. The map shows what is understood and what still needs exploration. Stable conclusions can then become reusable knowledge.
+
+**Taking stock during a long conversation, or returning to it later.** Instead of scrolling back through every message, review the current focus, confirmed points, and open questions before continuing.
+
+Think of it as navigation alongside your conversation, not a node for every message or a knowledge taxonomy disconnected from the discussion. A sync uses the conversation context and saved maps currently available to the Agent; it cannot automatically recover inaccessible history.
+
+## From conversation recall to reusable knowledge
+
+The skill maintains two complementary views:
 
 | Map | Purpose | What it keeps |
 |---|---|---|
@@ -75,8 +87,12 @@ conversation-memory-map/
 ├── references/map-spec.md         # English dual-map specification
 ├── references/map-spec.zh-CN.md   # Chinese dual-map specification
 └── examples/
-    └── knowledge-base-conversation-map.png
+    ├── knowledge-base-conversation-map.png # Chinese conversation + map
+    ├── conversation-to-map-en.png          # English scenario example
+    └── conversation-to-map.html            # Example source; #en for English
 ```
+
+Open the example HTML directly in a browser and click nodes to see their explanations. It demonstrates the presentation only; it does not read or listen to your real conversations.
 
 ## License
 

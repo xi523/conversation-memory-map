@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conversation Memory Map — Conversation to map</title>
+<style>
+*{box-sizing:border-box}body{margin:0;color:#25333b;background:#f3f5f4;font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}button{font:inherit}main{width:1840px;padding:46px 48px 30px;margin:auto}.brand{display:flex;align-items:center;justify-content:space-between;color:#53756a;font-size:16px;font-weight:650;letter-spacing:2px}.trigger-badge{color:#62746c;letter-spacing:0;border:1px solid #d8e2db;border-radius:30px;padding:8px 16px;background:#fafcfb;font-weight:500}h1{font-size:44px;line-height:1.2;letter-spacing:-1.6px;margin:17px 0 10px;font-weight:650}.subtitle{font-size:22px;color:#697870;margin:0 0 30px}.window{background:white;border:1px solid #dce4df;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px #263a2c0c}.window-bar{height:56px;background:#fbfcfb;border-bottom:1px solid #e4e9e5;display:flex;align-items:center;gap:22px;padding:0 24px;color:#718077;font-size:17px}.dots{display:flex;gap:8px}.dots i{display:block;width:10px;height:10px;background:#d0d9d3;border-radius:100%}.window-label{flex:1}.window-note{font-size:15px;color:#839087}.workspace{display:grid;grid-template-columns:475px 1fr;min-height:748px}.conversation{padding:28px 24px 22px;border-right:1px solid #e0e6e2;background:#fff}.panel-title{display:flex;justify-content:space-between;align-items:center;font-size:22px;font-weight:600;margin:0 0 22px}.panel-title small{color:#8b9890;font-size:15px;font-weight:400}.message{margin:0 0 20px}.speaker{display:flex;align-items:center;gap:7px;font-size:14px;color:#87948b;margin:0 0 8px}.avatar{display:inline-grid;place-items:center;border-radius:7px;width:22px;height:22px;color:#5e7567;background:#edf2ee;font-size:11px;font-weight:600}.message p{font-size:21px;line-height:1.62;margin:0;color:#34483b}.message.user .speaker{justify-content:flex-end}.message.user p{background:#eef3ef;padding:15px 18px;border-radius:15px 15px 3px 15px}.message.agent{padding-right:8px}.message.agent p{padding-left:3px}.message.sync{margin:28px 0 20px}.message.sync p{display:table;margin-left:auto;border:1px solid #8ab99e;background:#e9f5ed;color:#267049;font-weight:600}.sync-caption{font-size:15px;color:#70857a;margin:8px 0 0;text-align:right}.reply{display:flex;gap:10px;color:#317a57;font-size:17px;line-height:1.6;margin-top:10px}.reply .check{display:inline-grid;place-items:center;flex:0 0 22px;height:22px;border:1px solid #82b69a;border-radius:100%;margin-top:2px}.map{padding:28px 27px 22px;background:#fcfdfc}.map .panel-title{margin-bottom:14px}.legend{display:flex;gap:24px;font-size:15px;color:#687970;margin-bottom:10px}.legend span{display:flex;gap:7px;align-items:center}.legend i{height:7px;width:7px;border-radius:50%;background:var(--color)}.confirmed{--color:#348b64;--soft:#f1f9f4;--line:#9dc9af}.active{--color:#d06a4d;--soft:#fff5f0;--line:#e0ae9e}.future{--color:#8174b7;--soft:#f8f6fd;--line:#c5bbdf}.parked{--color:#8b9790;--soft:#f6f8f6;--line:#cbd3cc}.tree{position:relative;height:502px;margin:2px 0 17px;background-image:radial-gradient(#d7e1da .8px,transparent .8px);background-size:22px 22px;border-radius:10px}.edges{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.edges path{fill:none;stroke-width:1.8}.node{position:absolute;display:flex;flex-direction:column;gap:7px;width:249px;min-height:103px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--soft);text-align:left;cursor:pointer;color:#2e4034;box-shadow:0 5px 15px #3b4e4105}.node .status{color:var(--color);font-size:13px;font-weight:600}.node strong{font-size:21px;line-height:1.35;font-weight:600}.node .note{color:#7a877f;font-size:16px;line-height:1.45}.node.selected{outline:3px solid #dba58d26;outline-offset:3px}.node:focus-visible{outline:3px solid #458464;outline-offset:3px}.node.root{left:20px;top:197px;width:244px;padding:19px 18px}.node.root strong{font-size:23px}.node.level-one{left:367px}.node.level-two{left:823px;width:292px}.node[data-id="existing"]{top:20px}.node[data-id="directory"]{top:142px}.node[data-id="search"]{top:264px}.node[data-id="rebuild"]{top:386px}.node[data-id="spec"]{top:96px}.node[data-id="mapping"]{top:232px}.detail{border:1px solid #e5e9e5;border-left:3px solid #cf7f5a;border-radius:10px;background:white;padding:17px 20px;min-height:95px;display:flex;gap:18px;align-items:flex-start}.detail-label{font-size:15px;min-width:74px;color:#bd714f;padding-top:2px}.detail-title{font-size:18px;display:block;margin-bottom:5px;font-weight:600}.detail p{margin:0;font-size:16px;color:#7c8980;line-height:1.6}.foot{display:flex;justify-content:space-between;gap:24px;font-size:16px;color:#87948a;margin-top:18px}.foot b{color:#597563;font-weight:500}.en h1{font-size:45px}.en .message p{font-size:20px;line-height:1.55}.en .message{margin-bottom:20px}.en .message.sync{margin-top:22px}.en .node strong{font-size:20px}.en .node.root strong{font-size:23px}.en .node .note{font-size:15px}.en .detail-label{min-width:120px}.en .panel-title small{font-size:14px}@media(max-width:1839px){main{margin:0}}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><span>CONVERSATION MEMORY MAP</span><span class="trigger-badge" data-copy="badge"></span></div>
+  <h1 data-copy="headline"></h1>
+  <p class="subtitle" data-copy="subtitle"></p>
+  <div class="window">
+    <div class="window-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="window-label" data-copy="project"></span><span class="window-note" data-copy="illustration"></span></div>
+    <div class="workspace">
+      <section class="conversation" aria-label="Conversation">
+        <h2 class="panel-title"><span data-copy="conversation"></span><small data-copy="conversationHint"></small></h2>
+        <div class="message user"><div class="speaker" data-copy="you"></div><p data-copy="userOne"></p></div>
+        <div class="message agent"><div class="speaker"><span class="avatar">A</span>Agent</div><p data-copy="agentOne"></p></div>
+        <div class="message user"><div class="speaker" data-copy="you"></div><p data-copy="userTwo"></p></div>
+        <div class="message agent"><div class="speaker"><span class="avatar">A</span>Agent</div><p data-copy="agentTwo"></p></div>
+        <div class="message user sync"><p data-copy="sync"></p><div class="sync-caption" data-copy="syncHint"></div></div>
+        <div class="reply"><span class="check" aria-hidden="true">✓</span><span data-copy="reply"></span></div>
+      </section>
+      <section class="map" aria-label="Conversation thinking map">
+        <h2 class="panel-title"><span data-copy="mapTitle"></span><small data-copy="mapHint"></small></h2>
+        <div class="legend"><span class="confirmed"><i></i><span data-copy="confirmed"></span></span><span class="active"><i></i><span data-copy="active"></span></span><span class="future"><i></i><span data-copy="future"></span></span><span class="parked"><i></i><span data-copy="parked"></span></span></div>
+        <div class="tree" id="tree"><svg class="edges" aria-hidden="true"></svg></div>
+        <aside class="detail" aria-live="polite"><span class="detail-label" data-copy="conclusion"></span><div><strong class="detail-title" id="detail-title"></strong><p id="detail-note"></p></div></aside>
+      </section>
+    </div>
+  </div>
+  <footer class="foot"><span data-copy="footerLeft"></span><span data-copy="footerRight"></span></footer>
+</main>
+<script>
+const en = location.hash === '#en';
+document.documentElement.lang=en?'en':'zh-CN';
+document.body.classList.toggle('en',en);
+const copy=en?{
+ badge:'Human-triggered sync',headline:'Your conversation with an Agent, mapped on demand.',subtitle:'Revisit what you discussed, what you decided, and what comes next.',project:'Planning a team knowledge base',illustration:'Illustrative scenario · simplified dialogue',conversation:'You + Agent',conversationHint:'Discuss and refine',you:'You',
+ userOne:'We want a team knowledge base. Where should we start?',agentOne:'We could inventory documents, agree on a structure, then evaluate search.',userTwo:'Teams already have their own. Let’s align the structure first and discuss search later.',agentTwo:'Then the first deliverables are a directory standard and a mapping of existing folders.',sync:'Sync the conversation map',syncHint:'An explicit request to update',reply:'Synced. Decisions and open threads are now on the right.',mapTitle:'Conversation thinking map',mapHint:'Click a node to revisit the reasoning',confirmed:'Confirmed',active:'Discussing',future:'Revisit later',parked:'Parked',conclusion:'Current conclusion',footerLeft:'Keep talking. Sync when you want to take stock.',footerRight:'Stable conclusions → topic knowledge map'
+}:{
+ badge:'人工触发 · 按需同步',headline:'把你和 Agent 的对话，变成一张可回看的地图。',subtitle:'看见聊过什么、已确定什么、接下来讨论什么。',project:'与 Agent 讨论：团队知识库怎么建？',illustration:'使用场景示意 · 对话内容经简化',conversation:'你与 Agent 的对话',conversationHint:'边聊边收敛',you:'你',
+ userOne:'我们想建团队知识库，不知道先从哪里开始。',agentOne:'可以先盘点资料、统一目录，再评估检索方案。',userTwo:'大家已经在建了。这阶段先统一目录，检索方案以后再聊。',agentTwo:'那先聚焦两个交付：目录规范，以及现有目录映射表。',sync:'同步对话地图',syncHint:'由你发起，按需更新',reply:'已同步：确认事项、当前问题和后续议题，都在右侧。',mapTitle:'对话思考地图',mapHint:'点击节点，回看理由与下一步',confirmed:'已确认',active:'正在讨论',future:'后面再展开',parked:'暂时放下',conclusion:'当前结论',footerLeft:'继续聊，需要回顾时再同步。',footerRight:'稳定结论 → 沉淀到主题知识地图'
+};
+document.querySelectorAll('[data-copy]').forEach(el=>el.textContent=copy[el.dataset.copy]);
+const nodes=en?[
+ {id:'root',cls:'root confirmed',status:'confirmed',title:'Team knowledge base',note:'Organized from this conversation',detail:'Start with what teams already have.',next:'Use the existing material to agree on a shared structure.'},
+ {id:'existing',parent:'root',cls:'level-one confirmed',status:'confirmed',title:'Existing content',note:'Teams have already started',detail:'Build on the existing knowledge bases.',next:'The user confirmed that teams are already creating their own.'},
+ {id:'directory',parent:'root',cls:'level-one active',status:'active',title:'Align the structure',note:'The focus for this phase',detail:'Align the directory structure first.',next:'Prepare a shared standard and map the existing team folders to it.'},
+ {id:'search',parent:'root',cls:'level-one future',status:'future',title:'Evaluate search',note:'Revisit after alignment',detail:'Discuss search after the structure is aligned.',next:'The user explicitly moved this question to a later phase.'},
+ {id:'rebuild',parent:'root',cls:'level-one parked',status:'parked',title:'Build from scratch',note:'Outside the current scope',detail:'A rebuild is outside the current scope.',next:'Use the teams’ existing work as the starting point.'},
+ {id:'spec',parent:'directory',cls:'level-two active selected',status:'active',title:'Directory standard',note:'Define levels and naming',detail:'Align the structure, then map existing folders.',next:'Next: draft the directory standard and collect examples for review.'},
+ {id:'mapping',parent:'directory',cls:'level-two active',status:'active',title:'Existing-folder mapping',note:'Connect old and shared structures',detail:'Map each team’s existing folders.',next:'Identify matches, exceptions, and areas that need clarification.'}
+]:[
+ {id:'root',cls:'root confirmed',status:'confirmed',title:'团队知识库共建',note:'从这段对话中整理',detail:'从各团队已有的知识库出发。',next:'以现有资料为基础，形成大家能共同使用的目录框架。'},
+ {id:'existing',parent:'root',cls:'level-one confirmed',status:'confirmed',title:'已有知识库',note:'各团队已开始建设',detail:'各团队已经在建设自己的知识库。',next:'这来自用户明确补充的现状，是后续讨论的前提。'},
+ {id:'directory',parent:'root',cls:'level-one active',status:'active',title:'统一目录',note:'这一阶段的重点',detail:'当前先统一目录层级框架。',next:'先明确共同规范，再把各团队的已有目录对应进来。'},
+ {id:'search',parent:'root',cls:'level-one future',status:'future',title:'评估检索方案',note:'目录对齐后再讨论',detail:'检索方案留到后续讨论。',next:'用户明确将这项议题放到后面，不作为本阶段的前置条件。'},
+ {id:'rebuild',parent:'root',cls:'level-one parked',status:'parked',title:'从零建设',note:'当前不需要重新建设',detail:'本阶段以已有建设成果为起点。',next:'从零重新建设不在当前范围内。'},
+ {id:'spec',parent:'directory',cls:'level-two active selected',status:'active',title:'目录规范',note:'明确层级与命名规则',detail:'先统一目录，再映射已有内容。',next:'下一步：起草目录规范，收集示例进行评审。'},
+ {id:'mapping',parent:'directory',cls:'level-two active',status:'active',title:'现有目录映射表',note:'对应旧目录与统一框架',detail:'把各团队现有目录映射到共同框架。',next:'识别可以直接对应的目录，以及需要单独讨论的例外。'}
+];
+const tree=document.getElementById('tree');
+for(const n of nodes){const el=document.createElement('button');el.type='button';el.dataset.id=n.id;el.className='node '+n.cls;el.setAttribute('aria-pressed',n.id==='spec'?'true':'false');for(const [tag,cls,text] of [['span','status',copy[n.status]],['strong','',n.title],['span','note',n.note]]){const child=document.createElement(tag);child.className=cls;child.textContent=text;el.append(child);}el.addEventListener('click',()=>select(n.id));tree.append(el);}
+function select(id){const n=nodes.find(n=>n.id===id);document.querySelectorAll('.node').forEach(el=>{el.classList.toggle('selected',el.dataset.id===id);el.setAttribute('aria-pressed',String(el.dataset.id===id));});document.getElementById('detail-title').textContent=n.detail;document.getElementById('detail-note').textContent=n.next;}
+function draw(){const svg=tree.querySelector('svg');const frame=tree.getBoundingClientRect();svg.setAttribute('viewBox',`0 0 ${frame.width} ${frame.height}`);svg.replaceChildren();for(const n of nodes.filter(n=>n.parent)){const a=tree.querySelector(`[data-id="${n.parent}"]`).getBoundingClientRect(),b=tree.querySelector(`[data-id="${n.id}"]`).getBoundingClientRect();const x=a.right-frame.left,y=a.top+a.height/2-frame.top,tx=b.left-frame.left,ty=b.top+b.height/2-frame.top,d=(tx-x)*.5;const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',`M${x} ${y} C${x+d} ${y},${tx-d} ${ty},${tx} ${ty}`);p.setAttribute('stroke',{confirmed:'#92bfa5',active:'#d69a81',future:'#c1b6da',parked:'#ccd5ce'}[n.status]);svg.append(p);}}
+select('spec');draw();document.fonts.ready.then(draw);window.addEventListener('resize',draw);
+</script>
+</body>
+</html>
